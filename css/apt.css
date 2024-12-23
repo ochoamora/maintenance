@@ -1,0 +1,204 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('imagenes/fd.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+header, footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        footer {
+            bottom: 0;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+header img {
+    max-height: 70px;
+    vertical-align: middle;
+}
+header nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px; /* Ajusta el ancho máximo según necesites */
+    margin: auto;
+}
+
+.apartment {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.apartment img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.apartment h3 {
+    margin: 15px 0 10px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.apartment p {
+    margin: 10px 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.apartment a {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.apartment a:hover {
+    background-color: #34495e;
+}
+
+/* Detalles con carrusel */
+.details {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.close-button:hover {
+    background: darkred;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.carousel img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1500;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-nav.left {
+    left: 10px;
+}
+
+.carousel-nav.right {
+    right: 10px;
+}
+
+.carousel-nav:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+}
+
+
+    footer a {
+        color: #333;
+        text-decoration: none;
+}
+
+    footer a:hover {
+        text-decoration: underline;
+}
+
+
+

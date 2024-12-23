@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Apartaments list </title>
+    <link rel="stylesheet" href="css/apt.css">
+    <link rel="icon" href="img/rm.png">
+</head>
+<body>
+    <header>
+        <img src="img/rm.png" alt="Logo">
+        <nav>
+            
+            <a href="index.html">Home</a>
+            <a href="#apartamentos.html">Apartments</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+<hr style="border: 1px solid #ccc; margin: 80px 0;">
+
+    <div class="container">
+        <div class="apartment">
+            <img src="img/w1.png" alt="apartament 1">
+            <h3>Westbury Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-526-97390</p>
+            <p><strong>Email:</strong> westbury@wplassociates.com</p>
+            <a href="#" onclick="showDetails('apartment1')">Más Información</a>
+        </div>
+        <div class="apartment">
+            <img src="img/b1.png" alt="apartment 2">
+            <h3>Bristol Woods Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-666-471</p>
+            <p><strong>Email:</strong> cbristolwoods@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment2')">Más Información</a>
+        </div>
+        
+        <div class="apartment">
+            <img src="img/c5.png" alt="apartment 3">
+            <h3>Cambridge Crossing Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-617-7600</p>
+            <p><strong>Email:</strong> ccambridgecrossing@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment3')">Más Información</a>
+        </div>
+        <div class="apartment">
+            <img src="img/co1.png" alt="apartment 4">
+            <h3>Country Club Apartments</h3>
+            <p><strong>Teléfono:</strong> 541-485-7376</p>
+            <p><strong>Email:</strong> countryclub@wplassociates.com</p>
+            <a href="#" onclick="showDetails('apartment4')">Más Información</a>
+        </div>
+        
+        <div class="apartment">
+            <img src="img/m1.png" alt="apartment 5">
+            <h3>Meadows Apartments</h3>
+            <p><strong>Teléfono:</strong> 541-928-7015</p>
+            <p><strong>Email:</strong> meadows@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment5')">Más Información</a>
+        </div>
+        <div class="apartment">
+            <img src="img/N1.png" alt="apartment 6">
+            <h3>Northwind Apartments</h3>
+            <p><strong>Teléfono:</strong> 775-747-9200</p>
+            <p><strong>Email:</strong>northwind@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment6')">Más Información</a>
+        </div>
+        
+        <div class="apartment">
+            <img src="img/P1.jpg" alt="apartment 7">
+            <h3>Parkhurst Apartments</h3>
+            <p><strong>Teléfono:</strong> 360-377-9194</p>
+            <p><strong>Email:</strong> parkhurst@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment7')">Más Información</a>
+        </div>
+
+        <div class="apartment">
+            <img src="img/R1.jpg" alt="apartment 8 ">
+            <h3>Ripplingbrook Terrace Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-399-8696</p>
+            <p><strong>Email:</strong> ripplingbrook@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment8')">Más Información</a>
+        </div>
+        
+        <div class="apartment">
+            <img src="img/s1.png" alt="apartment 9">
+            <h3>Summit View Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-399-0656</p>
+            <p><strong>Email:</strong> summitview@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment9')">Más Información</a>
+        </div>
+
+        <div class="apartment">
+            <img src="img/su1.png" alt="apartment 10">
+            <h3>SUNPOINTE APARTMENTs<h3>
+            <p><strong>Teléfono:</strong> 503-669-9093</p>
+            <p><strong>Email:</strong> sunpointe@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment10')">Más Información</a>
+        </div>
+        
+        <div class="apartment">
+            <img src="img/t1.png" alt="apartment11">
+            <h3>Timberline Apartments</h3>
+            <p><strong>Teléfono:</strong> 503-624-7044</p>
+            <p><strong>Email:</strong> Timberline@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment11')">Más Información</a>
+        </div>
+
+        <div class="apartment">
+            <img src="img/H1.png" alt="apartment12">
+            <h3>Hogan Woods Apartments </h3>
+            <p><strong>Teléfono:</strong> 503-667-0545</p>
+            <p><strong>Email:</strong> hoganwoods@wplassociates.com</p>
+            
+            <a href="#" onclick="showDetails('apartment12')">Más Información</a>
+        </div>
+
+    </div>      
+    <footer>
+        <p>&copy; 2025 	wplmaintenance.org | <a href="privacy.html">Privacy Policy</a></p>
+      </footer>                               
+
+    <div class="details" id="details-container">
+        <button class="close-button" onclick="hideDetails()">Cerrar</button>
+        <div class="carousel">
+            <button class="carousel-nav left" onclick="prevImage()">&#10094;</button>
+            <img id="carousel-image" src="" alt="Imagen del apartamento">
+            <button class="carousel-nav right" onclick="nextImage()">&#10095;</button>
+        </div>
+        <h3 id="details-title"></h3>
+        <p id="details-description"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
